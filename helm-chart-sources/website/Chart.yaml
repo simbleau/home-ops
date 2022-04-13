@@ -1,6 +1,6 @@
 apiVersion: v2
 name: website
-description: A Helm chart for Kubernetes
+description: The kubernetes deployment for Spencer C. Imbleau's personal website.
 
 # A chart can be either an 'application' or a 'library' chart.
 #
