@@ -1,5 +1,5 @@
 # Kubernetes Orchestration Files
-[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/website)](https://artifacthub.io/packages/helm/website/website) \
+[![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/simbleau)](https://artifacthub.io/packages/search?user=simbleau) \
 All deployment files for my personal home laboratory and self hosting.
 
 ## Useful Links
