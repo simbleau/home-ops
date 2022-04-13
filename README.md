@@ -18,8 +18,13 @@ All deployment files for my personal home laboratory and self hosting.
 - `mkdir helm-chart-sources/${CHART_NAME}`
 - `helm create helm-chart-sources/${CHART_NAME}`
 - `helm lint helm-chart-sources/${CHART_NAME}`
-- `helm package helm-chart-sources/${CHART_NAME}`
+-  Consider [rebuilding the package](#building-helm-package)
 -  Consider [updating the helm repository](#updating-helm-repository)
+
+## Building Helm Packages
+- `export CHART_NAME="test"`
+- `cd helm-chart-packages`
+- `helm package ../helm-chart-sources/${CHART_NAME}`
 
 ## Updating Helm Repository
 - `helm repo index --url https://simbleau.github.io/k8s/ .`
