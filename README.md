@@ -18,7 +18,7 @@ All deployment files for my personal home laboratory and self hosting.
 - `mkdir helm-chart-sources/${CHART_NAME}`
 - `helm create helm-chart-sources/${CHART_NAME}`
 - `helm lint helm-chart-sources/${CHART_NAME}`
--  Consider [rebuilding the package](#building-helm-package)
+-  Consider [rebuilding the package](#building-helm-packages)
 -  Consider [updating the helm repository](#updating-helm-repository)
 
 ## Building Helm Packages
