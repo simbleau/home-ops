@@ -3,7 +3,8 @@
 All deployment files for my personal home laboratory and self hosting.
 
 ## Useful Links
-- [Helm Repository](https://github.com/simbleau/k8s)
+- Helm Repository: `https://simbleau.github.io/k8s`
+- [ArtifactHub](https://artifacthub.io/packages/search?user=simbleau)
 - [DockerHub Repository](https://hub.docker.com/u/simbleau)
 - [K8s YAML Validator](https://validkube.com/)
 
@@ -24,4 +25,4 @@ All deployment files for my personal home laboratory and self hosting.
 -  Consider [updating the helm repository](#updating-helm-repository)
 
 # License
-This  project is dual-licensed under both [Apache 2.0](LICENSE-APACHE) and [MIT](LICENSE-MIT) licenses.
+This project is dual-licensed under both [Apache 2.0](LICENSE-APACHE) and [MIT](LICENSE-MIT) licenses.
