@@ -11,7 +11,7 @@ All deployment files for my personal home laboratory and self hosting.
 # Deployment
 
 ## Dependencies
-- [Helm](https://helm.sh/) (`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`)
+- [Helm 3](https://helm.sh/) (`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`)
 
 ## Pushing Helm Charts
 - `export CHART_NAME="test"`
