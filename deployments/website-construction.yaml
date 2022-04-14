@@ -2,8 +2,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: website-deployment
+  name: website
   namespace: production
+  labels:
+    app: web
 spec:
   replicas: 2
   selector:
@@ -15,23 +17,11 @@ spec:
         app: web
     spec:
       containers:
-        - image: simbleau/website:construction
-          name: website-ctr
+        - name: website-ctr
+          image: simbleau/website:construction
           ports:
             - containerPort: 80
           resources:
             limits:
               cpu: "1"
               memory: 512M
----
-apiVersion: v1
-kind: Service
-metadata:
-  labels:
-    app: web
-  name: website-svc
-spec:
-  ports:
-    - port: 80
-  selector:
-    app: web
