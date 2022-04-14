@@ -13,10 +13,13 @@ All kubernetes configs here are for my personal home laboratory and self hosting
 - [Helm 3](https://helm.sh/) installed on the cluster
 
 # Deploying
-- `helm repo add simbleau https://simbleau.github.io/k8s`
-- `helm repo update`
-- Deploy chart
-  - ex: `helm install my-website simbleau/website --version 0.1.0`
+- From Repo (**Recommended**):
+  - `helm repo add simbleau https://simbleau.github.io/k8s`
+  - `helm repo update`
+  - Deploy package
+    - e.g. `helm install my-website simbleau/website --version 0.1.0`
+- From Package URL:
+  - `helm install test-web https://simbleau.github.io/k8s/helm-chart-packages/website-0.1.0.tgz`
 
 ## Pushing Helm Charts
 - `export CHART_NAME="test"`
