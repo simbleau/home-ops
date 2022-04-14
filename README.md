@@ -36,7 +36,7 @@ All kubernetes configs here are for my personal home laboratory and self hosting
 - `helm repo index --url https://simbleau.github.io/k8s/ .`
 
 # Troubleshooting
-- View the template: `helm template helm-chart-sources/<name>`
+- View the template: `helm template helm-chart-sources/<chart-name>`
 
 # License
 This project is dual-licensed under both [Apache 2.0](LICENSE-APACHE) and [MIT](LICENSE-MIT) licenses.
