@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: website-deployment
-  namespace: websites
+  namespace: production
 spec:
   replicas: 2
   selector:
