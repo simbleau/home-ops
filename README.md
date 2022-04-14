@@ -1,6 +1,6 @@
-# Kubernetes Orchestration Files
+# Kubernetes Configurations
 [![Artifact Hub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/simbleau)](https://artifacthub.io/packages/search?user=simbleau) \
-All deployment files for my personal home laboratory and self hosting.
+All kubernetes configs here are for my personal home laboratory and self hosting.
 
 ## Useful Links
 - Helm Repository: `https://simbleau.github.io/k8s`
@@ -8,17 +8,22 @@ All deployment files for my personal home laboratory and self hosting.
 - [DockerHub Repository](https://hub.docker.com/u/simbleau)
 - [K8s YAML Validator](https://validkube.com/)
 
-# Deployment
-
 ## Dependencies
-- [Helm 3](https://helm.sh/) (`curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash`)
+- [Kubernetes](https://kubernetes.io/) cluster
+- [Helm 3](https://helm.sh/) installed on the cluster
+
+# Deploying
+- `helm repo add simbleau https://simbleau.github.io/k8s`
+- `helm repo update`
+- Deploy chart
+  - ex: `helm install my-website simbleau/website --version 0.1.0`
 
 ## Pushing Helm Charts
 - `export CHART_NAME="test"`
 - `mkdir helm-chart-sources/${CHART_NAME}`
 - `helm create helm-chart-sources/${CHART_NAME}`
 - `helm lint helm-chart-sources/${CHART_NAME}`
--  Consider [rebuilding the package](#building-helm-packages)
+-  Consider [building a new package](#building-helm-packages)
 -  Consider [updating the helm repository](#updating-helm-repository)
 
 ## Building Helm Packages
