@@ -5,10 +5,11 @@
 replicaCount: 1
 
 image:
-  repository: simbleau/website:latest
+  repository: simbleau/website
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  # TODO : Use the Chart.yaml version when the website is built.
+  tag: "construction"
 
 imagePullSecrets: []
 nameOverride: ""
