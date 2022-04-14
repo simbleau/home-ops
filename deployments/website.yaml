@@ -3,7 +3,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: website
-  namespace: production
   labels:
     app: web
 spec:
@@ -18,7 +17,7 @@ spec:
     spec:
       containers:
         - name: website-ctr
-          image: simbleau/website:construction
+          image: simbleau/website:latest
           ports:
             - containerPort: 80
           resources:
