@@ -22,21 +22,21 @@ All kubernetes configs here are for my personal home laboratory and self hosting
   - `helm install <release-name> https://simbleau.github.io/gitops-at-home/k8s/helm/packages/website-0.1.0.tgz`
 
 ## Pushing Helm Charts
-- Create directory: `mkdir gitops-at-home/k8s/helm/charts/<chart-name>`
-- Init: `helm create gitops-at-home/k8s/helm/charts/<chart-name>`
-- Validate: `helm lint gitops-at-home/k8s/helm/charts/<chart-name>`
+- Create directory: `mkdir k8s/helm/charts/<chart-name>`
+- Init: `helm create k8s/helm/charts/<chart-name>`
+- Validate: `helm lint k8s/helm/charts/<chart-name>`
 - Consider [building a new package](#building-helm-packages)
 - Consider [updating the helm repository](#updating-helm-repository)
 
 ## Building Helm Packages
-- `cd gitops-at-home/k8s/helm/packages`
+- `cd k8s/helm/packages`
 - `helm package ../charts/<chart-name>`
 
 ## Updating Helm Repository
 - `helm repo index --url https://simbleau.github.io/gitops-at-home/k8s/helm/ .`
 
 # Troubleshooting
-- View the template: `helm template gitops-at-home/k8s/helm/charts/<chart-name>`
+- View the template: `helm template k8s/helm/charts/<chart-name>`
 
 # License
 This project is dual-licensed under both [Apache 2.0](LICENSE-APACHE) and [MIT](LICENSE-MIT) licenses.
