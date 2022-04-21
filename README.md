@@ -33,6 +33,7 @@ All kubernetes configs here are for my personal home laboratory and self hosting
 - `helm package ../charts/<chart-name>`
 
 ## Updating Helm Repository
+- `cd k8s/helm`
 - `helm repo index --url https://simbleau.github.io/gitops-at-home/k8s/helm/ .`
 
 # Troubleshooting
