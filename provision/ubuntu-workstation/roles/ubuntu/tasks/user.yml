@@ -1,4 +1,8 @@
 ---
+# User variables
+- include_vars: user.yml
+
+# Append my account to sudoers with implicit access to sudo provileges
 - name: Add {{ username }} to sudoers
   ansible.builtin.copy:
     content: "{{ username }} ALL=(ALL:ALL) NOPASSWD:ALL"
