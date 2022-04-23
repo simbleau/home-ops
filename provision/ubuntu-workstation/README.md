@@ -1,0 +1,9 @@
+# Ubuntu Workstation Provisioning
+[![ubuntu version](https://img.shields.io/badge/20.04%20Jammy%20Jellyfish-E95421?style=for-the-badge&logo=ubuntu&label=Ubuntu&logoColor=white)](https://releases.ubuntu.com/22.04/)
+
+This directory contains the files to provision the latest LTS release of Ubuntu.
+
+# Configuration Steps
+- Step 1...
+- Step 2...
+- ...
