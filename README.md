@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://kubernetes.io/images/wheel.svg" align="center" width="144px" height="144px"/>
+<img src="https://simpleicons.org/icons/kubernetes.svg" align="center" width="144px" height="144px"/>
 
 # Home Ops
 [![sponsor me](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/simbleau)
