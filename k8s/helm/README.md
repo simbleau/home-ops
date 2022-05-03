@@ -24,7 +24,7 @@ This directory a [__Helm 3__](https://helm.sh) registry, deployed with [__GitHub
 
 ---
 
-### 📦 Deployment
+## 📦 Deployment
 [![ArtifactHub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/simbleau&style=for-the-badge)](https://artifacthub.io/packages/search?user=simbleau)
 
 [__GitHub Pages__](https://pages.github.com/) allows us to configure this repository as a static site, which easily translates to a [__Helm__](https://helm.sh) registry. [__ArtifactHub__](https://artifacthub.io) provides us a front-end to our registry which is searchable and can be verified.
