@@ -36,8 +36,9 @@ I run a fully conformant [__Kubernetes__](https://kubernetes.io/) cluster at hom
 ---
 
 ## 🏁 Provisioning
-- [__`k8s`__](./provision/k8s/): Provision my kubernetes cluster.
-- [__`ubuntu-workstation`__](./provision/ubuntu-workstation/): Provision my Ubuntu Workstation.
+Currently, I automate the provisioning of the following systems at home:
+- [__My Ubuntu workstation__](./provision/ubuntu-workstation/)
+- [__My Kubernetes cluster__](./provision/k8s/)
 
 📙 _[__Click here__](./provision/) to see my [__Ansible__](https://www.ansible.com/) playbooks and roles for provisioning my home infrastructure._
 
