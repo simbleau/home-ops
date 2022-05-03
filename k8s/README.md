@@ -24,12 +24,14 @@ This directory contains kubernetes related infrastructure, such as a [__Helm__](
 
 ## 🛠️ Build
 ### ⚙️ Components
-My Kubernetes uses the following core components:
+My Kubernetes cluster uses the following core components:
 
+- [__projectcalico/calico__](https://github.com/projectcalico/calico): Internal Kubernetes networking plugin.
 - [__mozilla/sops__](https://toolkit.fluxcd.io/guides/mozilla-sops/): Manages secrets for Kubernetes, Ansible and Terraform.
-- [__kubernetes-sigs/external-dns__](https://github.com/kubernetes-sigs/external-dns): Automatically manages DNS records from my cluster in a cloud DNS provider.
 - [__jetstack/cert-manager__](https://cert-manager.io/docs/): Creates SSL certificates for services in my Kubernetes cluster.
 - [__kubernetes/ingress-nginx__](https://github.com/kubernetes/ingress-nginx/): Ingress controller to expose HTTP traffic to pods over DNS.
+- [__kubernetes-sigs/external-dns__](https://github.com/kubernetes-sigs/external-dns): Automatically manages DNS records from my cluster in a cloud DNS provider.
+- [__k8s_gateway__](https://github.com/ori-edge/k8s_gateway): CoreDNS plugin to resolve all types of external Kubernetes resources
 
 ### 📦 Deployment
 [![Helm](https://img.shields.io/badge/Helm%203-0f1689?style=for-the-badge&logo=helm&logoColor=white)](https://helm.sh)
@@ -45,7 +47,7 @@ Applications I serve from my home, such as [__my website__](https://spencer.imbl
 [![cloudfare](https://img.shields.io/badge/Cloudflare-Enabled-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)](https://uptimerobot.com)
 
 My DNS is composed of three entities:
-- [__Cloudfare__](https://cloudfare.com): An external name server and DNS which only talks to my ingress controller and hides my home IP.
+- [__Cloudfare__](https://cloudfare.com): A Cloud DNS provider which only talks to my ingress controller and hides my home IP.
 - [__external-dns__](https://github.com/kubernetes-sigs/external-dns): External DNS operator which syncs records to Cloudfare.
 - [__k8s_gateway__](https://github.com/ori-edge/k8s_gateway): Internal DNS operator serving my internal network.
 
