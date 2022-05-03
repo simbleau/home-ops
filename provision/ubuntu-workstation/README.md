@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://simpleicons.org/icons/ubuntu.svg" align="center" width="144px" height="144px"/>
+<img src="https://simpleicons.org/icons/ubuntu.svg" width="144px" height="144px"/>
 
 # Ubuntu Workstation
 [![sponsor me](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/simbleau)
