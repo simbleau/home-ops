@@ -21,8 +21,8 @@ This directory a [__Helm 3__](https://helm.sh) registry, deployed with [__GitHub
 
 ## 📁 Directories
 
-- **charts**: [__Helm__](https://helm.sh) charts (source).
-- **packages**: [__Helm__](https://helm.sh) packages (installable).
+- [__`charts`__](./charts/): [__Helm__](https://helm.sh) charts (source).
+- [__`packages`__](./packages/): [__Helm__](https://helm.sh) packages (installable).
 
 ---
 
