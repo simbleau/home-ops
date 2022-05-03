@@ -17,7 +17,6 @@
 ---
 
 ## 📖 Overview
-
 This is a mono repository for my home infrastructure and Kubernetes cluster. I try to adhere to Infrastructure as Code (IaC) and GitOps practices using tools like [__Ansible__](https://www.ansible.com/), [__Terraform__](https://www.terraform.io/), [__Kubernetes__](https://kubernetes.io/), [__Flux__](https://fluxcd.io/), [__Renovate__](https://renovatebot.com/) and [__GitHub Actions__](https://github.com/features/actions). All tools chosen are completely free and at no cost to myself.
 
 ---
@@ -30,8 +29,6 @@ This is a mono repository for my home infrastructure and Kubernetes cluster. I t
 ---
 
 ## ⛵ Kubernetes
-[![K3S](https://img.shields.io/badge/k3s-v1.23-brightgreen?style=for-the-badge&logo=kubernetes&logoColor=white)](https://k3s.io/)
-
 I run a fully conformant [__Kubernetes__](https://kubernetes.io/) cluster at home with [__K3S__](https://k3s.io/), provisioned overtop bare-metal Ubuntu 22.04 using [__Ansible__](https://www.ansible.com/). This is a semi hyperconverged cluster (HCI), with workloads and block storage sharing the same available resources from a centralized hardware RAID 5 enclosure.
 
 📘 _[__Click here__](./k8s/) to learn more about my cluster._
@@ -39,7 +36,6 @@ I run a fully conformant [__Kubernetes__](https://kubernetes.io/) cluster at hom
 ---
 
 ## 🏁 Provisioning
-
 - [__`k8s`__](./provision/k8s/): Provision my kubernetes cluster.
 - [__`ubuntu-workstation`__](./provision/ubuntu-workstation/): Provision my Ubuntu Workstation.
 
@@ -48,7 +44,6 @@ I run a fully conformant [__Kubernetes__](https://kubernetes.io/) cluster at hom
 ---
 
 ## 🤖 GitOps
-
 - [__Flux__](https://fluxcd.io/) watches my [`cluster`](./k8s/cluster/) folder and makes the changes to my cluster automatically, based on the YAML manifests.
 - [__Renovate__](https://renovatebot.com/) watches the repository for dependency updates, and automatically generates PRs for them. Automerging is allowed.
 - [__GitHub Actions__](https://github.com/features/actions) validates and tests push and merge requests for conflicts.
@@ -57,7 +52,6 @@ I run a fully conformant [__Kubernetes__](https://kubernetes.io/) cluster at hom
 ---
 
 ## 🔧 Hardware
-
 | Device                      | Amt | OS Disk | Data Disk    | RAM   | OS           | Purpose             |
 | --------------------------- | --- | ------- | ------------ | ----- | ------------ | ------------------- |
 | ARRIS Surfboard SB6183      | 1   | N/A     | N/A          | 256MB | N/A          | Modem               |

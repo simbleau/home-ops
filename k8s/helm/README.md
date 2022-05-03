@@ -14,13 +14,11 @@
 </div>
 
 ## 📖 Overview
-
 This directory a [__Helm 3__](https://helm.sh) registry, deployed with [__GitHub Pages__](https://pages.github.com/).
 
 ---
 
 ## 📁 Directories
-
 - [__`charts`__](./charts/): [__Helm__](https://helm.sh) charts (source).
 - [__`packages`__](./packages/): [__Helm__](https://helm.sh) packages (installable).
 

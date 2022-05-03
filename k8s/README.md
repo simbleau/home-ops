@@ -5,26 +5,24 @@
 # Kubernetes
 [![sponsor me](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/simbleau)
 [![buy me a coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/simbleau)
+[![K3S](https://img.shields.io/badge/k3s-v1.23-brightgreen?style=for-the-badge&logo=kubernetes&logoColor=white)](https://k3s.io/)
 
 </div>
 
 ---
 
 ## 📖 Overview
-
 This directory contains kubernetes related infrastructure, such as a [__Helm__](https://helm.sh) registry and configuration managed by [__Flux__](https://fluxcd.io/).
 
 ---
 
 ## 📁 Directories
-
 - [__`cluster`__](./cluster/): directory is the entrypoint to [__Flux__](https://fluxcd.io/).
 - [__`helm`__](./helm/): directory is the entrypoint for a [__Helm__](https://helm.sh) registry deployed with [__GitHub Pages__](https://pages.github.com/).
 
 ---
 
-## 🛠️ Configuration
-
+## 🛠️ Build
 ### ⚙️ Components
 My Kubernetes uses the following core components:
 
