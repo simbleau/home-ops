@@ -23,13 +23,13 @@ This is a mono repository for my home infrastructure and Kubernetes cluster. I t
 
 ## 📁 Directories
 
-- [__`k8s`__](./k8s/): directory contains my [__Kubernetes__](https://kubernetes.io/) configuration and artifacts.
-- [__`provision`__](./provision/): directory contains my [__Ansible__](https://www.ansible.com/) playbooks and roles for provisioning my home infrastructure.
+- [__`k8s`__](./k8s/): directory contains my Kubernetes configuration and artifacts.
+- [__`provision`__](./provision/): directory contains my Ansible playbooks and roles for provisioning my home infrastructure.
 
 ---
 
 ## ⛵ Kubernetes
-I run a fully conformant [__Kubernetes__](https://kubernetes.io/) cluster at home with [__K3S__](https://k3s.io/), provisioned overtop bare-metal Ubuntu 22.04 using [__Ansible__](https://www.ansible.com/). This is a semi hyperconverged cluster (HCI), with workloads and block storage sharing the same available resources from a centralized hardware RAID 5 enclosure.
+I run a fully conformant Kubernetes cluster at home with K3S, provisioned overtop bare-metal Ubuntu 22.04 using Ansible. This is a semi hyperconverged cluster (HCI), with workloads and block storage sharing the same available resources from a centralized RAID 5 samba share.
 
 📘 _[__Click here__](./k8s/) to learn more about my cluster._
 
@@ -48,7 +48,7 @@ Currently, I automate the provisioning of the following systems at home:
 - [__Flux__](https://fluxcd.io/) watches my [`cluster`](./k8s/cluster/) folder and makes the changes to my cluster automatically, based on the YAML manifests.
 - [__Renovate__](https://renovatebot.com/) watches the repository for dependency updates, and automatically generates PRs for them. Automerging is allowed.
 - [__GitHub Actions__](https://github.com/features/actions) validates and tests push and merge requests for conflicts.
-- [__GitHub Pages__](https://pages.github.com/) deploys my [`helm`](./k8s/helm/) folder as a [__Helm__](https://helm.sh) registry.
+- [__GitHub Pages__](https://pages.github.com/) automatic deployment enables my repository to act as a Helm registry.
 
 ---
 

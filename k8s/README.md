@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://kubernetes.io/images/wheel.svg" align="center" width="144px" height="144px"/>
+<img src="https://simpleicons.org/icons/helm.svg" align="center" width="144px" height="144px"/>
 
 # Kubernetes
 [![sponsor me](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/simbleau)
@@ -17,8 +17,8 @@ This directory contains kubernetes related infrastructure, such as a [__Helm__](
 ---
 
 ## 📁 Directories
-- [__`cluster`__](./cluster/): directory is the entrypoint to [__Flux__](https://fluxcd.io/).
-- [__`helm`__](./helm/): directory is the entrypoint for a [__Helm__](https://helm.sh) registry deployed with [__GitHub Pages__](https://pages.github.com/).
+- [__`cluster`__](./cluster/): directory is the entrypoint to Flux.
+- [__`helm`__](./helm/): directory is the entrypoint for a Helm registry deployed with GitHub Pages.
 
 ---
 
@@ -35,8 +35,8 @@ My Kubernetes uses the following core components:
 [![Helm](https://img.shields.io/badge/Helm%203-0f1689?style=for-the-badge&logo=helm&logoColor=white)](https://helm.sh)
 [![ArtifactHub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/simbleau&style=for-the-badge)](https://artifacthub.io/packages/search?user=simbleau)
 
-Applications I serve from my home, such as [__my website__](https://spencer.imbleau.com), are stored in a [__Helm 3__](https://helm.sh) registry, deployed with [__GitHub Pages__](https://pages.github.com/).
+Applications I serve from my home, such as [__my website__](https://spencer.imbleau.com), are stored in a Helm 3 registry, deployed with GitHub Pages.
 
 - **Registry URI**: `https://simbleau.github.io/home-ops/k8s/helm`
 
-📕 _[__Click here__](./helm/) to learn more about my [__Helm__](https://helm.sh) registry._
+📕 _[__Click here__](./helm/) to learn more about my Helm registry._
