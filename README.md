@@ -33,7 +33,7 @@ This is a mono repository for my home infrastructure and Kubernetes cluster. I t
 ## ⛵ Kubernetes
 I run a fully conformant Kubernetes cluster at home with K3S, provisioned overtop bare-metal Ubuntu 22.04 using Ansible. This is a semi hyperconverged cluster (HCI), with workloads and block storage sharing the same available resources from a centralized RAID 5 samba share.
 
-📘 _[__Click here__](./k8s/) to learn more about my cluster._
+📘 _[__Click here__](./k8s/README.md) to learn more about my cluster._
 
 ---
 
@@ -42,7 +42,16 @@ Currently, I automate the provisioning of the following systems at home:
 - [__My Ubuntu workstation__](./provision/ubuntu-workstation/)
 - [__My Kubernetes cluster__](./provision/k8s/)
 
-📙 _[__Click here__](./provision/) to see my [__Ansible__](https://www.ansible.com/) playbooks and roles for provisioning my home infrastructure._
+📙 _[__Click here__](./provision/README.md) to see my Ansible playbooks and roles for provisioning my home infrastructure._
+
+---
+
+## 🌐 DNS
+[![cloudfare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=Cloudflare&logoColor=white)](https://uptimerobot.com)
+
+Over WAN, I have forwarded ports `80` and `443` from my router. I use [Cloudflare](https://www.cloudflare.com/) as a proxy to hide my home WAN IP and to firewall certain traffic. When not on my home network, all the traffic coming in forwards to my ingress controller on port `80` and `443`. I block all IPs not originating from the [Cloudflares list of IP ranges](https://www.cloudflare.com/ips/).
+
+📗 _[__Click here__](./k8s/README.md) to see how DNS is handled internally and externally by my cluster._
 
 ---
 
