@@ -32,8 +32,9 @@ My Kubernetes uses the following core components:
 - [__kubernetes/ingress-nginx__](https://github.com/kubernetes/ingress-nginx/): Ingress controller to expose HTTP traffic to pods over DNS.
 
 ### 📦 Deployment
+[![Helm](https://img.shields.io/badge/Helm%203-0f1689?style=for-the-badge&logo=helm&logoColor=white)](https://helm.sh)
 [![ArtifactHub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/simbleau&style=for-the-badge)](https://artifacthub.io/packages/search?user=simbleau)
-[![Helm](https://img.shields.io/badge/Helm%203-https%3A%2F%2Fsimbleau.github.io%2Fhome--ops%2Fk8s%2Fhelm-0f1689?style=for-the-badge&logo=helm&logoColor=white)](https://simbleau.github.io/home-ops/k8s/helm)\
+
 Applications I serve from my home, such as [__my website__](https://spencer.imbleau.com), are stored in a [__Helm 3__](https://helm.sh) registry, deployed with [__GitHub Pages__](https://pages.github.com/).
 
 - **Registry URI**: `https://simbleau.github.io/home-ops/k8s/helm`
