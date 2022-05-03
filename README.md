@@ -24,8 +24,8 @@ This is a mono repository for my home infrastructure and Kubernetes cluster. I t
 
 ## 📁 Directories
 
-- **k8s**: directory contains my [__Kubernetes__](https://kubernetes.io/) configuration and artifacts.
-- **provision**: directory contains my [__Ansible__](https://www.ansible.com/) playbooks and roles for provisioning my home infrastructure.
+- [__`k8s`__](./k8s/): directory contains my [__Kubernetes__](https://kubernetes.io/) configuration and artifacts.
+- [__`provision`__](./provision/): directory contains my [__Ansible__](https://www.ansible.com/) playbooks and roles for provisioning my home infrastructure.
 
 ---
 
@@ -40,8 +40,8 @@ I run a fully conformant [__Kubernetes__](https://kubernetes.io/) cluster at hom
 
 ## 🏁 Provisioning
 
-- [__k8s__](./provision/k8s/): Provision my kubernetes cluster.
-- [__ubuntu-workstation__](./provision/k8s/): Provision my Ubuntu Workstation.
+- [__`k8s`__](./provision/k8s/): Provision my kubernetes cluster.
+- [__`ubuntu-workstation`__](./provision/ubuntu-workstation/): Provision my Ubuntu Workstation.
 
 📙 _[__Click here__](./provision/) to see my [__Ansible__](https://www.ansible.com/) playbooks and roles for provisioning my home infrastructure._
 

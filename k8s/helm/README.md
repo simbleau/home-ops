@@ -46,7 +46,7 @@ In general, all programs and images I own are uploaded and verified on [__Docker
   - `helm repo update`
 
 ### Creating Helm Charts
-- Create directory: `mkdir k8s/helm/charts/<chart-name>`
+- Create: `mkdir k8s/helm/charts/<chart-name>`
 - Init: `helm create k8s/helm/charts/<chart-name>`
 
 ### Testing Deployment

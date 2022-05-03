@@ -18,8 +18,8 @@ This directory contains kubernetes related infrastructure, such as a [__Helm__](
 
 ## 📁 Directories
 
-- **cluster**: directory is the entrypoint to [__Flux__](https://fluxcd.io/).
-- **helm**: directory is the entrypoint for a [__Helm__](https://helm.sh) registry deployed with [__GitHub Pages__](https://pages.github.com/).
+- [__`cluster`__](./cluster/): directory is the entrypoint to [__Flux__](https://fluxcd.io/).
+- [__`helm`__](./helm/): directory is the entrypoint for a [__Helm__](https://helm.sh) registry deployed with [__GitHub Pages__](https://pages.github.com/).
 
 ---
 
@@ -35,9 +35,9 @@ My Kubernetes uses the following core components:
 
 ### 📦 Deployment
 [![ArtifactHub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/simbleau&style=for-the-badge)](https://artifacthub.io/packages/search?user=simbleau)
-[![Helm](https://img.shields.io/badge/Helm%203-https%3A%2F%2Fsimbleau.github.io%2Fhome--ops%2Fhelm-0f1689?style=for-the-badge&logo=helm&logoColor=white)](https://simbleau.github.io/home-ops/helm)\
+[![Helm](https://img.shields.io/badge/Helm%203-https%3A%2F%2Fsimbleau.github.io%2Fhome--ops%2Fk8s%2Fhelm-0f1689?style=for-the-badge&logo=helm&logoColor=white)](https://simbleau.github.io/home-ops/k8s/helm)\
 Applications I serve from my home, such as [__my website__](https://spencer.imbleau.com), are stored in a [__Helm 3__](https://helm.sh) registry, deployed with [__GitHub Pages__](https://pages.github.com/).
 
-- [__Helm Registry__](https://simbleau.github.io/home-ops/helm): `https://simbleau.github.io/home-ops/helm`
+- **Registry URI**: `https://simbleau.github.io/home-ops/k8s/helm`
 
 📕 _[__Click here__](./helm/) to learn more about my [__Helm__](https://helm.sh) registry._
