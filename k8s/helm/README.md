@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://helm.sh/img/helm.svg" align="center" width="144px" height="144px"/>
+<img src="https://simpleicons.org/icons/helm.svg" align="center" width="144px" height="144px"/>
 
 # Helm Registry
 [![sponsor me](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/simbleau)
@@ -19,22 +19,22 @@ This directory a [__Helm 3__](https://helm.sh) registry, deployed with [__GitHub
 ---
 
 ## 📁 Directories
-- [__`charts`__](./charts/): [__Helm__](https://helm.sh) charts (source).
-- [__`packages`__](./packages/): [__Helm__](https://helm.sh) packages (installable).
+- [__`charts`__](./charts/): Helm charts as source.
+- [__`packages`__](./packages/): Helm charts as installable packages.
 
 ---
 
 ## 📦 Deployment
 [![ArtifactHub](https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/simbleau&style=for-the-badge)](https://artifacthub.io/packages/search?user=simbleau)
 
-[__GitHub Pages__](https://pages.github.com/) allows us to configure this repository as a static site, which easily translates to a [__Helm__](https://helm.sh) registry. [__ArtifactHub__](https://artifacthub.io) provides us a front-end to our registry which is searchable and can be verified.
+GitHub Pages allows us to configure this repository as a static site, which easily translates to a Helm registry. ArtifactHub provides us a front-end to our registry which is searchable and can be verified.
 
 ---
 
 ## 🧰 Development
 [![DockerHub](https://img.shields.io/badge/DockerHub-simbleau-2496ed?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/u/simbleau)
 
-In general, all programs and images I own are uploaded and verified on [__DockerHub__](https://hub.docker.com). From these images, I develop [__Helm__](https://helm.sh) charts which are packages for my cluster.
+In general, all programs and images I own are uploaded and verified on DockerHub. From these images, I develop Helm charts which are packages for my cluster.
 
 ### Testing Dependencies
 - [Kubernetes](https://kubernetes.io/) cluster or [minikube](https://minikube.sigs.k8s.io/)
