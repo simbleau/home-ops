@@ -47,10 +47,9 @@ Currently, I automate the provisioning of the following systems at home:
 ---
 
 ## 🌐 DNS
-
 Over WAN, I have forwarded ports `80` and `443` from my router. I use [Cloudflare](https://www.cloudflare.com/) as a proxy to hide my home WAN IP and to firewall certain traffic, [external-dns](https://github.com/kubernetes-sigs/external-dns) as my external DNS, and [k8s_gateway](https://github.com/ori-edge/k8s_gateway) as my internal DNS.
 
-📗 _[__Click here__](./k8s/README.md#🌐-dns) to see how DNS is handled by my cluster._
+📗 _[__Click here__](./k8s/README.md#-dns) to see how DNS is handled by my cluster._
 
 ---
 
