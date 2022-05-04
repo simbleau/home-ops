@@ -1,0 +1,3 @@
+# Prohobit pushing sensitive VPN files
+vpn/*.ovpn
+vpn/*.cert
