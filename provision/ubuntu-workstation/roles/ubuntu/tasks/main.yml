@@ -2,4 +2,9 @@
 - name: Prepare users
   include: user.yml
   tags:
-    - user
+    - provision
+
+- name: Cleanup
+  include: cleanup.yml
+  tags:
+    - provision
