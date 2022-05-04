@@ -1,3 +1,4 @@
 # Prohobit pushing sensitive VPN files
-vpn/*.ovpn
-vpn/*.cert
+/vpn/
+!/vpn/*.age
+!/vpn/README.md
