@@ -25,5 +25,9 @@ This directory contains [__Ansible__](https://ansible.com) playbooks and roles t
 ---
 
 ## 🏁 Provisioning Steps
-- [ ] `sudo apt install ansible`
-- [ ] Run playbook: `ansible-playbook provision/ubuntu-workstation/main.yml`
+- [ ] Install ansible
+  > `sudo apt install ansible`
+- [ ] Change directories (or set [`ANSIBLE_CONFIG`](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#envvar-ANSIBLE_CONFIG))
+  > `cd ./provision/ubuntu-workstation/'`
+- [ ] Run provisioning playbook
+  > `ansible-playbook ./playbooks/provision.yml`
