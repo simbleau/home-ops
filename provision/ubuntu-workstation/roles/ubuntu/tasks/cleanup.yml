@@ -1,6 +1,0 @@
-# Append my account to sudoers with implicit access to sudo provileges
-- name: Delete provisioning account
-  ansible.builtin.user:
-    name: provision
-    state: absent
-    remove: true

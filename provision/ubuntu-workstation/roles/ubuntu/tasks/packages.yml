@@ -1,0 +1,44 @@
+---
+- name: Install core packages
+  ansible.builtin.package:
+    update_cache: yes
+    name:
+      - firefox
+      - vlc
+
+- name: Install core snaps
+  community.general.snap:
+    name:
+      - mailspring
+      - code
+      - authy
+      - drawio
+      - inkscape
+      - helm
+
+- name: Install entertainment snaps
+  community.general.snap:
+    name:
+      - discord
+      - spotify
+      - runelite
+    tags:
+      - entertainment
+
+# Install Rust
+- name: Download Rust installer
+  get_url:
+    url: https://sh.rustup.rs
+    dest: /tmp/sh.rustup.rs
+    mode: "0755"
+    force: "yes"
+  tags:
+    - rust
+- name: Install Rust/Cargo
+  shell: /tmp/sh.rustup.rs -y
+  tags:
+    - rust
+- name: Enable Bash auto-completion
+  shell: rustup completions bash > ~/.local/share/bash-completion/completions/rustup
+  tags:
+    - rust

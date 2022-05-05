@@ -2,8 +2,6 @@
 - hosts:
     - workstations
   become: true
-  become_method: su
-  become_user: provision
   gather_facts: false
   any_errors_fatal: true
   pre_tasks:
