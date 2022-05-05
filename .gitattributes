@@ -1,3 +1,7 @@
-# Use sopsdiffer for git diffing to alleviate cryptography indirection
+# git attribute configurations
+
+# Use SOPS for git diffing to alleviate cryptography indirection.
+# see also:
+#   `.gitconfig` in the project directory.
 *.sops.* diff=sopsdiffer
 *.age diff=sopsdiffer

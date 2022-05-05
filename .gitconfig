@@ -1,2 +1,8 @@
+# git override configurations
+
+# sopsdiffer uses SOPS to decrypt on git diff.
+# This allows changes to be diffed in plain text.
+# see also:
+#   SOPS: https://github.com/mozilla/sops#readme
 [diff "sopsdiffer"]
     textconv = "sops -d"
