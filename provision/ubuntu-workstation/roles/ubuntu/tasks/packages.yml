@@ -45,6 +45,7 @@
       - mailspring
       - runelite
       - spotify
+      - zulip
 
 # Install Rust
 - name: Checking Rust installation
