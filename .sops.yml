@@ -1,0 +1,18 @@
+---
+# Configuration for VSCode Extension: `signageos.signageos-vscode-sops`
+#
+# This configuration allows for live editing of SOPS encrypted files.
+# see also:
+#   SOPS: https://github.com/mozilla/sops#readme
+
+# All of my secrets are encrypted with age encryption.
+# see also:
+#   age encryption: https://github.com/FiloSottile/age#readme
+creation_rules:
+  - path_regex: .*\.sops\.ya?ml
+    age: >-
+      age1vyn7adkeklaztjhgcuh3sflwzlk6mcuy52ja0wr5kn3ghf5u8e2sa2esn4
+
+  - path_regex: .*\.age
+    age: >-
+      age1vyn7adkeklaztjhgcuh3sflwzlk6mcuy52ja0wr5kn3ghf5u8e2sa2esn4

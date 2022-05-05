@@ -1,0 +1,3 @@
+# Use sopsdiffer for git diffing to alleviate cryptography indirection
+*.sops.* diff=sopsdiffer
+*.age diff=sopsdiffer
