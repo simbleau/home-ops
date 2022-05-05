@@ -1,44 +1,72 @@
 ---
-- name: Install core packages
+- name: Upgrade all system packages
+  ansible.builtin.apt:
+    upgrade: full
+    update_cache: true
+    cache_valid_time: 3600
+    autoclean: true
+    autoremove: true
+  register: apt_upgrade
+  retries: 5
+  until: apt_upgrade is success
+
+- name: Install dependencies
+  ansible.builtin.package:
+    update_cache: yes
+    name:
+      - apt-transport-https
+      - curl
+      - vim
+      - wget
+      - pip
+  register: apt_deps
+  retries: 5
+  until: apt_deps is success
+
+- name: Install applications
   ansible.builtin.package:
     update_cache: yes
     name:
       - firefox
+      - flameshot
       - vlc
+  register: apt_apps
+  retries: 5
+  until: apt_apps is success
 
-- name: Install core snaps
+- name: Install snaps
   community.general.snap:
     name:
-      - mailspring
-      - code
       - authy
+      - code
+      - discord
       - drawio
       - inkscape
-      - helm
-
-- name: Install entertainment snaps
-  community.general.snap:
-    name:
-      - discord
-      - spotify
+      - mailspring
       - runelite
-    tags:
-      - entertainment
+      - spotify
 
 # Install Rust
+- name: Checking Rust installation
+  stat:
+    path: /home/{{ username }}/.cargo/bin/rustup
+  register: rustup
 - name: Download Rust installer
   get_url:
     url: https://sh.rustup.rs
     dest: /tmp/sh.rustup.rs
     mode: "0755"
     force: "yes"
-  tags:
-    - rust
+  when: rustup.stat.exists == false
 - name: Install Rust/Cargo
-  shell: /tmp/sh.rustup.rs -y
-  tags:
-    - rust
-- name: Enable Bash auto-completion
-  shell: rustup completions bash > ~/.local/share/bash-completion/completions/rustup
-  tags:
-    - rust
+  shell: |
+    # Run installer
+    /tmp/sh.rustup.rs -y
+    # Enable auto-completion for Rustup
+    mkdir -p /home/{{ username }}/.local/share/bash-completion/completions
+    /home/{{ username }}/.cargo/bin/rustup completions bash > \
+      /home/{{ username }}/.local/share/bash-completion/completions/rustup
+    # Enable auto-completion for Cargo
+    cat $(/home/{{ username }}/.cargo/bin/rustc --print sysroot)/etc/bash_completion.d/cargo > \
+      /home/{{ username }}/.local/share/bash-completion/completions/cargo
+  when: rustup.stat.exists == false
