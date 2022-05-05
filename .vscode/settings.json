@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "**/*.yml": "yaml",
+        "**/provision/**/*.yml": "ansible",
+        "**/provision/**/*.sops.yml": "yaml",
+        "**/terraform/**/*.tf": "terraform"
+    },
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-funding.json": ".github/FUNDING.yml",
+        "https://json.schemastore.org/github-workflow.json": ".github/workflows/*.yml",
+        "Kubernetes": "k8s/cluster/*.yml",
+    },
+}
