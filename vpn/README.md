@@ -27,7 +27,7 @@ This directory contains OpenVPN server and client matter for my home infrastruct
 
 > `sops -d login.confg.age > login.conf` \
 > `sops -d client.ovpn.age > client.ovpn` \
-> `openvpn --config client.ovpn`
+> `openvpn --config client.ovpn --auth-user-pass login.conf`
 
 ---
 
