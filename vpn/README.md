@@ -5,7 +5,7 @@
 # OpenVPN
 [![sponsor me](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/simbleau)
 [![buy me a coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/simbleau)
-[![K3S](https://img.shields.io/badge/k3s-v1.23-brightgreen?style=for-the-badge&logo=kubernetes&logoColor=white)](https://k3s.io/)
+[![openvpn](https://img.shields.io/badge/OpenVPN-EA7E20?style=for-the-badge&logo=openvpn&logoColor=black)](https://openvpn.net)
 
 </div>
 
@@ -23,12 +23,20 @@ This directory contains OpenVPN server and client matter for my home infrastruct
 
 ---
 
+## 🔓 Connection Test
+
+> `sops -d login.confg.age > login.conf` \
+> `sops -d client.ovpn.age > client.ovpn` \
+> `openvpn --config client.ovpn`
+
+---
+
 ## 🔄 Cryptography
 
 ### Client
-- **Decryption**: `age --decrypt -i key.txt client.ovpn.age > client.ovpn`
-- **Encryption**: `age --encrypt <public key> client.ovpn > client.ovpn.age`
+- **Decryption**: `sops -d client.ovpn.age > client.ovpn`
+- **Encryption**: `sops -e --age <public key> client.ovpn > client.ovpn.age`
 
 ### Server
-- **Decryption**: `age --decrypt -i key.txt server.ovpn.cert.age > server.ovpn.cert`
-- **Encryption**: `age --encrypt <public key> server.ovpn.cert > server.ovpn.cert.age`
+- **Decryption**: `sops -d server.ovpn.cert.age > server.ovpn.cert`
+- **Encryption**: `sops -e --age <public key> server.ovpn.cert > server.ovpn.cert.age`
