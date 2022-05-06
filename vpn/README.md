@@ -17,8 +17,9 @@ This directory contains OpenVPN server and client matter for my home infrastruct
 ---
 
 ## 📁 Files
-- [__`client.ovpn.age`__](./cluster/): Age encrypted client configuration file for OpenVPN.
-- [__`server.ovpn.cert.age`__](./helm/): Age encrypted server certificate for OpenVPN.
+- [__`server.ovpn.cert.age`__](./server.ovpn.cert.age): Age encrypted server certificate for OpenVPN.
+- [__`client.ovpn.age`__](./client.ovpn.age): Age encrypted client configuration file for OpenVPN.
+- [__`login.confg.age`__](./login.conf.age): Age encrypted client login credentials for OpenVPN.
 
 ---
 
