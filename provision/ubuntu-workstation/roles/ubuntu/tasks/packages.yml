@@ -28,6 +28,7 @@
     update_cache: yes
     name:
       - firefox
+      - age
       - flameshot
       - vlc
       - kdenlive
