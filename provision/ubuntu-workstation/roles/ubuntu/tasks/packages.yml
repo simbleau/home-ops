@@ -30,6 +30,7 @@
       - firefox
       - flameshot
       - vlc
+      - kdenlive
   register: apt_apps
   retries: 5
   until: apt_apps is success
