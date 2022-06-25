@@ -25,9 +25,14 @@ This directory contains [__Ansible__](https://ansible.com) playbooks and roles t
 ---
 
 ## 🏁 Provisioning Steps
+- [ ] Install SOPS for data encryption (**required**)
+  > [https://github.com/mozilla/sops/releases](https://github.com/mozilla/sops/releases)
+- [ ] Mount a secure device with access to the SOPS `keys.txt` file
+- [ ] Export the file path to the shell
+  > `export SOPS_AGE_KEY_FILE="/mnt/../sops/age/keys.txt"`
 - [ ] Install ansible
   > `sudo apt install ansible`
-- [ ] Change directories (or set [`ANSIBLE_CONFIG`](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#envvar-ANSIBLE_CONFIG))
-  > `cd ./provision/ubuntu-workstation/'`
+- [ ] Install ansible requirements
+  > `ansible-galaxy install -r requirements.yml`
 - [ ] Run provisioning playbook
   > `ansible-playbook ./playbooks/provision.yml`

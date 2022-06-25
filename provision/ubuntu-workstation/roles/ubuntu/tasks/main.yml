@@ -1,12 +1,23 @@
+#- name: Set up users
+#  include: user.yml
+#
+#- name: 
+#  include: config.yml
+#
+#- name: Set locale
+#  include: locale.yml
+#
+#- name: Install packages
+#  include: packages.yml
+#
+#- name: Install configuration
+#  include: config.yml
+#
+#- name: Cleanup
+#  include: cleanup.yml
 ---
-- name: Set up users
-  include: user.yml
+- include_vars: user.yml
+- include_vars: sops.yml
 
-- name: Set locale
-  include: locale.yml
-
-- name: Install packages
-  include: packages.yml
-
-- name: Cleanup
-  include: cleanup.yml
+- name: Test
+  include: sops.yml

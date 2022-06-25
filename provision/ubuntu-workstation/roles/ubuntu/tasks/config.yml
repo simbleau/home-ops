@@ -1,0 +1,12 @@
+---
+- ansible.builtin.file:
+    name: Create configuration directory
+    path: "{{ config_dir }}"
+    state: directory
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: 0775
+
+- ansible.builtin.copy:
+    src: "{{ role_path }}/files/foo.conf"
+    dest: "{{ config_dir }}/"

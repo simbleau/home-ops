@@ -1,0 +1,38 @@
+---
+- include_vars: sops.yml
+
+- name: Create SOPS directory
+  ansible.builtin.file:
+    path: "{{ sops_dir }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0775
+
+- name: Create SOPS age directory
+  ansible.builtin.file:
+    path: "{{ sops_dir }}/age"
+    state: directory
+    owner: root
+    group: root
+    mode: 0775
+
+- name: Load SOPS data
+  ansible.builtin.set_fact:
+    encrypted_data: "{{ lookup('file', '/home/simbleau/git/home-ops/provision/ubuntu-workstation/files/test.sops.yml') }}"
+
+- name: Output secrets to screen (BAD IDEA!)
+  ansible.builtin.debug:
+    msg: "Content: {{ encrypted_data }}"
+
+- name: Decrypt data and decode decrypted YAML
+  set_fact:
+    decrypted_data: "{{ encrypted_data | community.sops.decrypt }}"
+
+- name: Show decrypted data
+  debug:
+    msg: "{{ decrypted_data }}"
+
+- ansible.builtin.copy:
+    content: "{{ decrypted_data }}"
+    dest: "{{ config_dir }}/testx"
