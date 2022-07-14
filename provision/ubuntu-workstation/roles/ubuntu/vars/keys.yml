@@ -1,0 +1,3 @@
+---
+sops_keys_dir: "{{ home_dir }}/.config/sops/age"
+ssh_dir: "{{ home_dir }}/.ssh"

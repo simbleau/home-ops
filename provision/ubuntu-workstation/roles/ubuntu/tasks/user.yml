@@ -1,15 +1,14 @@
 ---
-- include_vars: user.yml
 
-# Adds the user
-- name: Add the user
+# Adds user
+- name: Add {{ username }}
   ansible.builtin.user:
     name: "{{ username }}"
     shell: /bin/bash
     groups: sudo
     append: yes
 
-# Append my account to sudoers with implicit access to sudo provileges
+# Append account to sudoers with implicit access to sudo provileges
 - name: Add {{ username }} to sudoers
   ansible.builtin.copy:
     content: "{{ username }} ALL=(ALL:ALL) NOPASSWD:ALL"

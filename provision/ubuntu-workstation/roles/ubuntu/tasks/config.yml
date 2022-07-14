@@ -1,4 +1,6 @@
 ---
+- include_vars: config.yml
+
 - ansible.builtin.file:
     name: Create configuration directory
     path: "{{ config_dir }}"
@@ -7,6 +9,7 @@
     group: "{{ username }}"
     mode: 0775
 
+# .bashrc
 - ansible.builtin.copy:
-    src: "{{ role_path }}/files/foo.conf"
-    dest: "{{ config_dir }}/"
+    src: ".bashrc"
+    dest: "{{ home_dir }}/.bashrc"

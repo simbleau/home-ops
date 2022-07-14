@@ -1,18 +1,8 @@
 ---
-- hosts: localhost
+- hosts: all
   become: true
   gather_facts: false
   any_errors_fatal: true
-  vars_prompt:
-#    - name: hostname
-#      prompt: "Enter desired hostname > "
-#      private: no
-    - name: username
-      prompt: "Enter desired username > "
-      private: no
-#    - name: password
-#      prompt: "Enter desired password > "
-#      private: no
   pre_tasks:
     - name: Assert SOPS is installed
       shell: command -v sops >/dev/null 2>&1

@@ -1,0 +1,45 @@
+---
+- include_vars: keys.yml
+
+- name: Create SOPS directory
+  ansible.builtin.file:
+    path: "{{ sops_keys_dir }}"
+    state: directory
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: 0775
+
+- name: Load SOPS key
+  ansible.builtin.set_fact:
+    sops_keys: "{{ lookup('file', 'keys.txt.sops.age')  | community.sops.decrypt }}"
+
+- name: Staging SOPS keys.txt
+  ansible.builtin.copy:
+    content: "{{ sops_keys }}"
+    dest: "{{ sops_keys_dir }}/keys.txt"
+
+- name: Create .ssh directory
+  ansible.builtin.file:
+    path: "{{ ssh_dir }}"
+    state: directory
+    owner: "{{ username }}"
+    group: "{{ username }}"
+    mode: 0775
+
+- name: Load SSH private key
+  ansible.builtin.set_fact:
+    id_rsa: "{{ lookup('file', 'id_rsa.sops.age')  | community.sops.decrypt }}"
+
+- name: Load SSH public key
+  ansible.builtin.set_fact:
+    id_rsa_pub: "{{ lookup('file', 'id_rsa.pub.sops.age')  | community.sops.decrypt }}"
+
+- name: Staging SSH private key
+  ansible.builtin.copy:
+    content: "{{ id_rsa }}"
+    dest: "{{ ssh_dir }}/id_rsa"
+
+- name: Staging SSH public key
+  ansible.builtin.copy:
+    content: "{{ id_rsa_pub }}"
+    dest: "{{ ssh_dir }}/id_rsa.pub"

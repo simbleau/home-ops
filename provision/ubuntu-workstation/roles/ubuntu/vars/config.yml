@@ -1,0 +1,2 @@
+---
+config_dir: "{{ home_dir }}/.config"
