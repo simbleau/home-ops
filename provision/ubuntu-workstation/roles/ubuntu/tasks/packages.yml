@@ -62,15 +62,18 @@
     mode: "0755"
     force: "yes"
   when: rustup.stat.exists == false
-- name: Install Rust/Cargo
+- name: Install Rustup
+  shell: /tmp/sh.rustup.rs -y
+  when: rustup.stat.exists == false
+- name: Enable auto completion for Cargo
   shell: |
-    # Run installer
-    /tmp/sh.rustup.rs -y
-    # Enable auto-completion for Rustup
+    source "$HOME/.cargo/env"
+
     mkdir -p /home/{{ username }}/.local/share/bash-completion/completions
+
     /home/{{ username }}/.cargo/bin/rustup completions bash > \
       /home/{{ username }}/.local/share/bash-completion/completions/rustup
-    # Enable auto-completion for Cargo
+
     cat $(/home/{{ username }}/.cargo/bin/rustc --print sysroot)/etc/bash_completion.d/cargo > \
       /home/{{ username }}/.local/share/bash-completion/completions/cargo
-  when: rustup.stat.exists == false
+
