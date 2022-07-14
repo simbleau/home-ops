@@ -11,7 +11,7 @@
 
 - name: Load SOPS key
   ansible.builtin.set_fact:
-    sops_keys: "{{ lookup('file', 'keys.txt.sops.age')  | community.sops.decrypt }}"
+    sops_keys: "{{ lookup('file', 'keys.txt.sops.age')  | community.sops.decrypt(output_type='binary') }}"
 
 - name: Staging SOPS keys.txt
   ansible.builtin.copy:
@@ -28,11 +28,11 @@
 
 - name: Load SSH private key
   ansible.builtin.set_fact:
-    id_rsa: "{{ lookup('file', 'id_rsa.sops.age')  | community.sops.decrypt }}"
+    id_rsa: "{{ lookup('file', 'id_rsa.sops.age')  | community.sops.decrypt(output_type='binary') }}"
 
 - name: Load SSH public key
   ansible.builtin.set_fact:
-    id_rsa_pub: "{{ lookup('file', 'id_rsa.pub.sops.age')  | community.sops.decrypt }}"
+    id_rsa_pub: "{{ lookup('file', 'id_rsa.pub.sops.age')  | community.sops.decrypt(output_type='binary') }}"
 
 - name: Staging SSH private key
   ansible.builtin.copy:
