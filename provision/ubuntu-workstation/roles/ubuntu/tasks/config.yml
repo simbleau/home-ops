@@ -1,8 +1,8 @@
 ---
 - include_vars: config.yml
 
-- ansible.builtin.file:
-    name: Create configuration directory
+- name: Create configuration directory
+  ansible.builtin.file:
     path: "{{ config_dir }}"
     state: directory
     owner: "{{ username }}"
@@ -10,6 +10,7 @@
     mode: 0775
 
 # .bashrc
-- ansible.builtin.copy:
+- name: Installing bashrc
+  ansible.builtin.copy:
     src: ".bashrc"
     dest: "{{ home_dir }}/.bashrc"
