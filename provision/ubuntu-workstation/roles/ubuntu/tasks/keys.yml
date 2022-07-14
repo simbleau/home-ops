@@ -36,10 +36,10 @@
 
 - name: Staging SSH private key
   ansible.builtin.copy:
-    content: "{{ id_rsa }}"
+    content: "{{ id_rsa }}\n"
     dest: "{{ ssh_dir }}/id_rsa"
 
 - name: Staging SSH public key
   ansible.builtin.copy:
-    content: "{{ id_rsa_pub }}"
+    content: "{{ id_rsa_pub }}\n"
     dest: "{{ ssh_dir }}/id_rsa.pub"
