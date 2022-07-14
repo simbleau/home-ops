@@ -30,9 +30,10 @@
     name:
       - firefox
       - age
-      - flameshot
+      - gnome-screenshot
       - vlc
       - kdenlive
+      - xclip
   register: apt_apps
   retries: 5
   until: apt_apps is success
