@@ -1,3 +1,6 @@
+---
+- include_vars: main.yml
+
 - name: Set up users
   include: user.yml
 
