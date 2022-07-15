@@ -112,3 +112,7 @@ alias rm='rm -i'
 
 # source cargo
 . "$HOME/.cargo/env"
+
+# Automatically add SSH keys
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_rsa

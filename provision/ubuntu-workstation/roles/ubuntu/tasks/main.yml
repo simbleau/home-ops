@@ -15,6 +15,3 @@
 
 - name: Install configuration
   include: config.yml
-
-- name: Cleanup
-  include: cleanup.yml
