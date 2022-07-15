@@ -3,9 +3,7 @@
 <img src="https://simpleicons.org/icons/ansible.svg" width="144px" height="144px"/>
 
 # Provisioning
-[![sponsor me](https://img.shields.io/badge/sponsor-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white)](https://github.com/sponsors/simbleau)
-[![buy me a coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/simbleau)
-[![Ansible](https://img.shields.io/badge/ansible%205-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white)](https://ansible.com/)
+[![Ansible](https://img.shields.io/badge/ansible-%231A1918.svg?style=for-the-badge&logo=ansible&logoColor=white)](https://ansible.com/)
 
 </div>
 
