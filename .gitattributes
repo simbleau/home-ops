@@ -4,4 +4,3 @@
 # see also:
 #   `.gitconfig` in the project directory.
 *.sops.* diff=sopsdiffer
-*.age diff=sopsdiffer
