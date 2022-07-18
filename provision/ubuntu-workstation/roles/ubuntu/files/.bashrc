@@ -116,3 +116,6 @@ alias rm='rm -i'
 # Automatically add SSH keys
 eval "$(ssh-agent -s)"
 ssh-add ~/.ssh/id_rsa
+
+# Include additional binaries
+export PATH="$PATH:~/bin"
