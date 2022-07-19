@@ -78,3 +78,5 @@
     cat $(/home/{{ username }}/.cargo/bin/rustc --print sysroot)/etc/bash_completion.d/cargo > \
       /home/{{ username }}/.local/share/bash-completion/completions/cargo
 
+# TODO : Install gh cli
+# TODO : Install SOPS
