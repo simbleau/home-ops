@@ -52,31 +52,48 @@
       - zulip
 
 # Install Rust
-- name: Checking Rust installation
+- name: Checking for Rust
   stat:
     path: /home/{{ username }}/.cargo/bin/rustup
   register: rustup
-- name: Download Rust installer
+- name: Download Rust
   get_url:
     url: https://sh.rustup.rs
     dest: /tmp/sh.rustup.rs
     mode: "0755"
     force: "yes"
   when: rustup.stat.exists == false
-- name: Install Rustup
+- name: Install Rust
   shell: /tmp/sh.rustup.rs -y
   when: rustup.stat.exists == false
-- name: Enable auto completion for Cargo
+
+# Install GH CLI
+- name: Checking for GitHub CLI
+  stat:
+    path: /usr/bin/gh
+  register: gh
+- name: Install GH CLI
+  shell: |
+    curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+    sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+    sudo apt update
+    sudo apt install -y gh
+
+# TODO : Install SOPS
+
+# Install bash completions
+- name: Make bash completions directory
+  shell: mkdir -p /home/{{ username }}/.local/share/bash-completion/completions
+- name: Install Cargo completions
   shell: |
     source "$HOME/.cargo/env"
-
-    mkdir -p /home/{{ username }}/.local/share/bash-completion/completions
-
     /home/{{ username }}/.cargo/bin/rustup completions bash > \
       /home/{{ username }}/.local/share/bash-completion/completions/rustup
-
     cat $(/home/{{ username }}/.cargo/bin/rustc --print sysroot)/etc/bash_completion.d/cargo > \
       /home/{{ username }}/.local/share/bash-completion/completions/cargo
-
-# TODO : Install gh cli
-# TODO : Install SOPS
+  when: rustup.stat.exists == false
+- name: Install GH CLI completions
+  shell: |
+    gh completion -s bash > \
+      /home/{{ username }}/.local/share/bash-completion/completions/gh
